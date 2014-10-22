@@ -19,6 +19,7 @@ public class ExampleMod
     	ruby.setUnlocalizedName("ruby");
     	ruby.setCreativeTab(CreativeTabs.tabMaterials);
     	GameRegistry.registerItem(ruby, "ruby");
+    	ruby.setTextureName(MODID + ":ruby");
     }
     
     @EventHandler
