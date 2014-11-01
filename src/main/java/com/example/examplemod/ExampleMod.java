@@ -6,6 +6,7 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -44,6 +45,18 @@ public class ExampleMod
     		.setBlockName("blockRuby")
     		.setBlockTextureName("examplemod:ruby_block");
     	GameRegistry.registerBlock(rubyBlock, "blockRuby");
+    	
+    	// Recipe for solid Ruby Block
+    	GameRegistry.addShapedRecipe(new ItemStack(rubyBlock),
+    			// Recipe: 9 rubies per Ruby Block
+    			"###", 
+    			"###", 
+    			"###", 
+    			// ruby
+    			'#', ruby);
+    	GameRegistry.addShapedRecipe(new ItemStack(ruby, 9),
+    			"#", 
+    			'#', rubyBlock);
     }
     
     @EventHandler
