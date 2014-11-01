@@ -1,6 +1,8 @@
 package com.example.examplemod;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockCompressed;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -27,12 +29,21 @@ public class ExampleMod
     	
     	// RubyOre
     	Block rubyOre = new RubyOre()
-    			.setHardness(3.0F)
-    			.setResistance(5.0F)
-    			.setStepSound(Block.soundTypePiston)
-    			.setBlockName("oreRuby")
-    			.setBlockTextureName("examplemod:ruby_ore");
+    		.setHardness(3.0F)
+    		.setResistance(5.0F)
+    		.setStepSound(Block.soundTypePiston)
+    		.setBlockName("oreRuby")
+    		.setBlockTextureName("examplemod:ruby_ore");
     	GameRegistry.registerBlock(rubyOre, "oreRuby");
+    	
+    	// Ruby Block
+    	Block rubyBlock = new BlockCompressed(MapColor.redColor)
+    		.setHardness(5.0F)
+    		.setResistance(10.0F)
+    		.setStepSound(Block.soundTypeMetal)
+    		.setBlockName("blockRuby")
+    		.setBlockTextureName("examplemod:ruby_block");
+    	GameRegistry.registerBlock(rubyBlock, "blockRuby");
     }
     
     @EventHandler
