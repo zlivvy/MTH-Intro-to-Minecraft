@@ -1,5 +1,6 @@
 package com.example.examplemod;
 
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -17,11 +18,21 @@ public class ExampleMod
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+    	// Ruby
     	Item ruby = new Item();
     	ruby.setUnlocalizedName("ruby");
     	ruby.setCreativeTab(CreativeTabs.tabMaterials);
     	GameRegistry.registerItem(ruby, "ruby");
     	ruby.setTextureName(MODID + ":ruby");
+    	
+    	// RubyOre
+    	Block rubyOre = new RubyOre()
+    			.setHardness(3.0F)
+    			.setResistance(5.0F)
+    			.setStepSound(Block.soundTypePiston)
+    			.setBlockName("oreRuby")
+    			.setBlockTextureName("examplemod:ruby_ore");
+    	GameRegistry.registerBlock(rubyOre, "oreRuby");
     }
     
     @EventHandler
