@@ -15,9 +15,9 @@ public class RubyOreGenerator implements IWorldGenerator {
 			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		// TODO Auto-generated method stub
 		if (world.provider.dimensionId == 0) {
-			for (int i = 0; i < 128; i++) {
+			for (int i = 16; i < 30; i++) {
 				// set coordinates
-				int x = chunkX * 16 + random.nextInt(16);
+				int x = chunkX *  + random.nextInt(16);
 				int y = 15 + random.nextInt(145);
 				int z = chunkZ * 16 + random.nextInt(16);
 					
