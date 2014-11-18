@@ -8,6 +8,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -61,6 +62,11 @@ public class ExampleMod
     			"#", 
     			'#', rubyBlock);
     	ToolMaterial rubyTool = EnumHelper.addToolMaterial("RUBY", 3, 1561, 8.0F, 3.0F, 10);
+    	
+    	 Item rubySword = new ItemSword(rubyTool).setUnlocalizedName("rubySword").setTextureName(MODID + ":ruby_sword");
+    	 GameRegistry.registerItem(rubySword, "rubySword");
+    	 
+    	 
     }
     // Init
     @EventHandler
