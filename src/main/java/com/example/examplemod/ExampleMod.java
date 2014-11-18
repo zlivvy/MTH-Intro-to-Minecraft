@@ -5,6 +5,7 @@ import net.minecraft.block.BlockCompressed;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
@@ -66,7 +67,11 @@ public class ExampleMod
     	 Item rubySword = new ItemSword(rubyTool).setUnlocalizedName("rubySword").setTextureName(MODID + ":ruby_sword");
     	 GameRegistry.registerItem(rubySword, "rubySword");
     	 
-    	 
+    	 GameRegistry.addShapedRecipe(new ItemStack(rubySword), "X",
+                 "X",
+                 "#",
+                 'X', ruby,
+                 '#', Items.stick);
     }
     // Init
     @EventHandler
