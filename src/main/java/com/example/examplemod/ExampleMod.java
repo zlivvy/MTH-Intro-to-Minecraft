@@ -6,7 +6,9 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -58,6 +60,7 @@ public class ExampleMod
     	GameRegistry.addShapedRecipe(new ItemStack(ruby, 9),
     			"#", 
     			'#', rubyBlock);
+    	ToolMaterial rubyTool = EnumHelper.addToolMaterial("RUBY", 3, 1561, 8.0F, 3.0F, 10);
     }
     // Init
     @EventHandler
